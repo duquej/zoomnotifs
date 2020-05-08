@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/duquej/zoomnotifs#readme",
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "moment-timezone": "^0.5.28"
   }
 }
