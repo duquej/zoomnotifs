@@ -9,7 +9,7 @@ function generateHTML(
   zoomLink,
   gif = "https://media.giphy.com/media/12XDYvMJNcmLgQ/giphy.gif"
 ) {
-  const secretKey = process.env.SECRET_KEY;
+  const secretKey = process.env.SECRET_KEY; //NOT IMPLEMENTED.
   const cipherText = CryptoJS.AES.encrypt(email, secretKey).toString();
   const cipherString = cipherText
     .replace(/\+/g, "p1L2u3S")
@@ -44,13 +44,13 @@ function generateHTML(
   <img src="${gif}">
   <br>
   <br>
-  <p style="font-size:11px"> Click <a href="www.cornellnotifs.com/api/delete-class-section?email=${cipherString}&classCode=${classCode
+  <p style="font-size:11px"> Click <a href="www.zoomnotifs.com/api/delete-class-section?email=${cipherString}&classCode=${classCode
     .split(" ")
     .join("+")}&classSection=${sectionName
     .split(" ")
     .join(
       "+"
-    )}">here</a> to stop receiving emails for this class. Click <a href="www.cornellnotifs.com/api/delete-user?email=${cipherString}">here</a> to unsubscribe from Cornell Notifs</p>
+    )}">here</a> to stop receiving emails for this class. Click <a href="www.zoomnotifs.com/api/delete-user?email=${cipherString}">here</a> to unsubscribe from Zoom Notifs</p>
   `;
 }
 
@@ -63,14 +63,14 @@ function generateConfirmationHTML(courseData) {
     courses += `<li>${courseCode} (${courseName}), ${sectionCode}</li>`;
   });
   return `
-    <p>Hey there! Welcome to Cornell Notifs! You will get reminders for the following courses:</p> 
+    <p>Hey there! Welcome to Zoom Notifs! You will get reminders for the following courses:</p> 
     <ul>
     ${courses}
     </ul>
     <img src="https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif">
     <br>
     <p>Cheers,</p>
-    <p>Han & Ansh</p>
+    <p>Jonathan</p>
     `;
 }
 
