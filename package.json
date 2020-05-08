@@ -1,0 +1,22 @@
+{
+  "name": "zoomnotifs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duquej/zoomnotifs.git"
+  },
+  "author": "jd849",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duquej/zoomnotifs/issues"
+  },
+  "homepage": "https://github.com/duquej/zoomnotifs#readme",
+  "dependencies": {
+    "moment-timezone": "^0.5.28"
+  }
+}
