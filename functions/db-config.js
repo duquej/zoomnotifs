@@ -5,7 +5,7 @@ const serviceAccount = require("./service-account.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://class-reminders.firebaseio.com",
+  databaseURL: "https://zoomnotifs.firebaseio.com",
 });
 
 module.exports = {

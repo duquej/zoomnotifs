@@ -9,9 +9,9 @@ function generateHTML(
   zoomLink,
   gif = "https://media.giphy.com/media/12XDYvMJNcmLgQ/giphy.gif"
 ) {
-  const secretKey = process.env.SECRET_KEY; //NOT IMPLEMENTED.
+  const secretKey = "appletoes"; //TO REMOVE FROM FINAL VERSION!!!
   const cipherText = CryptoJS.AES.encrypt(email, secretKey).toString();
-  const cipherString = cipherText
+  const cipherString = cipherText //MIGHT NOT BE NECESSARY???
     .replace(/\+/g, "p1L2u3S")
     .replace(/\//g, "s1L2a3S4h")
     .replace(/=/g, "e1Q2u3A4l")

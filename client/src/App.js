@@ -45,8 +45,7 @@ function App() {
           bottom: "0",
         }}
       >
-        Built with ❤️ by Jonathan Duque wishing everyone well in these uncertain
-        times
+        Built by Jonathan Duque wishing everyone well in these uncertain times
       </Footer>
     </div>
   );
