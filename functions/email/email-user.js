@@ -120,7 +120,22 @@ function send(email, classCode, className, classSection, zoomLink) {
 }
 
 function sendDebug(email, courseData) {
-  console.log("debug");
+  console.log("sendDebug called...");
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(undefined, (error, info) => {
+      if (error) {
+        console.log("Debug error occured error");
+        resolve();
+      } else if (undefined) {
+        console.log("inside undefined elif");
+        reject();
+      } else {
+        console.log("Message sent: %s", info.messageId);
+        console.log(info.response);
+        resolve();
+      }
+    });
+  });
 }
 
 function sendConfirmation(email, courseData) {

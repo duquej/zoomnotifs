@@ -112,9 +112,10 @@ function handleFormSubmission(email, id) {
         return courseData;
       })
       .then(async (courseData) => {
+        console.log("async being called...");
         emailUtil
           .sendConfirmation(email, courseData)
-          .then(() => resolve(true))
+          .then(() => resolve(courseData))
           .catch((err) => reject(err));
       })
       .catch((err) => reject(err));
