@@ -8,7 +8,7 @@ const CryptoJS = require("crypto-js");
 app.use(cors());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client")));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/schedule", (req, res) => {
   console.log("form submission submitted.");
