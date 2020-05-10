@@ -45,7 +45,7 @@ function App() {
           bottom: "0",
         }}
       >
-        Built by Jonathan Duque wishing everyone well in these uncertain times
+        Wishing everyone well in these uncertain times
       </Footer>
     </div>
   );
