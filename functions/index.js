@@ -93,7 +93,7 @@ const sendEmails = async () => {
         await classRef
           .get()
           .then((linkdoc) => {
-            // If class existss
+            // If class exists
             if (linkdoc.exists) {
               const link = linkdoc.data()[classSection];
               promises.push(
