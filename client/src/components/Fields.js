@@ -45,10 +45,12 @@ export class Fields extends Component {
       .get(`/api/schedule?email=${email}&id=${schedulerId}`)
       .then((res) => {
         this.setState({ loading: false });
+        console.log(res);
         if (res.data.success === true) {
           // Only load success modal prompt when there is at least one unlinked class
           if (res.data.unlinkedClasses.length > 0) {
             // Pop up with success modal
+            console.log("Setting showSuccessModal to true...");
             this.setState({
               showSuccessModal: true,
               classesWithoutLinks: res.data.unlinkedClasses,
@@ -61,6 +63,7 @@ export class Fields extends Component {
             res && res.data.message && res.data.message.length > 0
               ? res.data.message
               : "Unable to sign up at the moment. Please try again later";
+          console.log(errorMsg);
           Message.error(errorMsg);
         }
       })

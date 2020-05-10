@@ -1,6 +1,6 @@
 let scraper = require("./scraper.js");
 let firebase = require("./functions/db-config");
-let emailUtil = require("./functions/email/email-user.ts");
+let emailUtil = require("./functions/email/email-user.js");
 
 const db = firebase.admin.firestore();
 
@@ -99,9 +99,13 @@ function handleFormSubmission(email, id) {
             }
           }
         });
+
         Promise.all(promises).then(() => {
+          console.log("calling retrieve missing links....");
           // Retrieve missing links
           retrieveMissingLinks(courseData).then((unlinkedCourses) => {
+            console.log("below are the unlinked courses...");
+            console.log(unlinkedCourses);
             resolve(unlinkedCourses);
           });
         });

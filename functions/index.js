@@ -1,5 +1,5 @@
 const functions = require("firebase-functions");
-const emailUtil = require("./email/email-user.ts"); //NOT YET IMPLEMENTED.
+const emailUtil = require("./email/email-user.js"); //NOT YET IMPLEMENTED.
 const firebase = require("./db-config.js");
 const moment = require("moment-timezone");
 

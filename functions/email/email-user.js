@@ -78,7 +78,8 @@ const gifsDictionary = [
 
 const transporter = nodemailer.createTransport(
   nodemailerSendgrid({
-    apiKey: process.env.SENDGRID_API_KEY, ///REPLACE HERE!
+    apiKey:
+      "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", ///REPLACE HERE!
   })
 );
 
@@ -116,6 +117,10 @@ function send(email, classCode, className, classSection, zoomLink) {
       }
     });
   });
+}
+
+function sendDebug(email, courseData) {
+  console.log("debug");
 }
 
 function sendConfirmation(email, courseData) {
