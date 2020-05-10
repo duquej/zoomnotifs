@@ -11,8 +11,8 @@ import "./App.css";
 
 //RE-ENABLE ONCE FIGURED OUT
 
-//ReactGA.initialize("UA-164161545-1");
-//ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize("UA-154637386-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const { Header, Content, Footer } = Layout;
 
@@ -45,7 +45,7 @@ function App() {
           bottom: "0",
         }}
       >
-        Built by Jonathan Duque wishing everyone well in these uncertain times
+        Wishing everyone well in these uncertain times
       </Footer>
     </div>
   );

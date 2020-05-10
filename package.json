@@ -8,7 +8,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "both": "concurrently \"npm run server\" \"npm run client\"",
-    "debug": "concurrently \"set DEBUG=express:* node server.js\" \"npm run client\""
+    "debug": "concurrently \"set DEBUG=express:* node server.js\" \"npm run client\"",
+    "heroku-postbuild": "npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/duquej/zoomnotifs#readme",
   "dependencies": {
+    "antd": "^4.2.0",
+    "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
@@ -32,7 +35,11 @@
     "nodemailer": "^6.4.6",
     "nodemailer-sendgrid": "^1.0.3",
     "path": "^0.12.7",
-    "puppeteer": "^3.0.4"
+    "puppeteer": "^3.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-scripts": "^3.4.1"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
