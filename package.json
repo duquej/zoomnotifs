@@ -23,6 +23,7 @@
   "homepage": "https://github.com/duquej/zoomnotifs#readme",
   "dependencies": {
     "antd": "^4.2.0",
+    "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
